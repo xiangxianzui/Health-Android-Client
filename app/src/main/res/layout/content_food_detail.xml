@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="edu.monash.infotech.health.FoodDetailActivity"
+    tools:showIn="@layout/activity_food_detail"
+    android:background="@drawable/step_bg">
+
+    <TableRow android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:id="@+id/imagesTableRow"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/foodImageView"
+            android:scaleType="center"
+            android:layout_margin="20dp" />
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/foodImageView1"
+            android:scaleType="center"
+            android:layout_alignRight="@+id/foodImageView"
+            android:layout_margin="20dp" />
+    </TableRow>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:id="@+id/FoodDetailLinearLayout"
+        android:layout_below="@+id/imagesTableRow">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Food Name"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:id="@+id/FoodNameTextView"
+            android:gravity="center"
+            android:layout_margin="10dp"/>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fat"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:textColor="#8B2252"
+                android:id="@+id/FatTextView"
+                android:layout_gravity="left|bottom"
+                android:layout_margin="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Carbs"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:textColor="#71C671"
+                android:id="@+id/CarbsTextView"
+                android:layout_gravity="right|bottom"
+                android:layout_margin="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calorie"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:textColor="#FF8C00"
+                android:id="@+id/CalorieTextView"
+                android:layout_gravity="left|top"
+                android:layout_margin="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Per xxg"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:id="@+id/PerTextView"
+                android:layout_gravity="center"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Protein"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:textColor="#483D8B"
+                android:id="@+id/ProteinTextView"
+                android:layout_gravity="right|top"
+                android:layout_margin="30dp"/>
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/foodDescription"
+            android:text="Food Description"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Find more details here:"
+            android:textStyle="italic|bold"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Url: "
+            android:textStyle="italic"
+            android:autoLink="web"
+            android:id="@+id/urlTextView"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="vertical"
+        android:id="@+id/FoodDetailLL">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/foodDetailTextView"
+            android:text="Food Detail"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:hint="Enter Serving: "
+                android:layout_centerHorizontal="true"
+                android:id="@+id/ServingEditText"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eat It!"
+                android:id="@+id/EatButton"
+                android:layout_centerHorizontal="true"
+                android:onClick="EatOnClick" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Take A Look"
+        android:id="@+id/TakeLookButton"
+        android:layout_below="@+id/FoodDetailLinearLayout"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="TakeLookOnClick"
+        android:visibility="visible"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="edu.monash.infotech.health.CreateAcountActivity"
+    tools:showIn="@layout/activity_create_acount">
+
+
+    <ImageView
+        android:id="@+id/loginBgImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/loginbg_img"
+        />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="300dp"
+        android:layout_height="500dp"
+        android:layout_gravity="center">
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="Username"
+            android:layout_weight="1"
+            android:id="@+id/Username_EditText"
+            android:layout_gravity="center_horizontal" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:id="@+id/Password_EditText"
+            android:hint="Password"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Born Year"
+                android:id="@+id/BornYear_TextView"
+                android:layout_weight="1" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:id="@+id/BornYear_Spinner"
+                 />
+            <View
+                android:layout_height="1px"
+                android:background="#000000"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp">
+            </View>
+        </LinearLayout>
+
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/Gender_RadioGroup"
+            android:orientation="horizontal"
+            >
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:id="@+id/Male_RadioButton"
+                android:layout_weight="1"
+                android:checked="false" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:id="@+id/Female_RadioButton"
+                android:layout_weight="1"
+                android:checked="false" />
+
+        </RadioGroup>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned"
+            android:layout_weight="1"
+            android:hint="Height"
+            android:id="@+id/Height_EditText"
+            android:layout_gravity="center_horizontal" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned"
+            android:layout_weight="1"
+            android:hint="Weight"
+            android:id="@+id/Weight_EditText"
+            android:layout_gravity="center_horizontal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Active Level"
+                android:id="@+id/ActivityLevl_TextView"
+                android:layout_weight="1" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:id="@+id/ActivityLevl_Spinner">
+            </Spinner>
+
+            <View
+                android:layout_height="1px"
+                android:background="#000000"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp">
+            </View>
+        </LinearLayout>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned"
+            android:id="@+id/StepPerMile_EditText"
+            android:hint="Steps/Mile"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Acount!"
+            android:id="@+id/CreateAcount_Button"
+            android:onClick="CreateOnClick"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1" />
+
+
+    </LinearLayout>
+
+    <ImageButton
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/arrow_left"
+        android:id="@+id/Back_Button"
+        android:onClick="BackOnClick"
+        android:layout_gravity="left|top" />
+
+
+</FrameLayout>

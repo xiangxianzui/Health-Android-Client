@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select a date"
+        android:id="@+id/selectDateEditText"
+        android:editable="false"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/hiddenTextView"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Steps"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:gravity="center"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show Bar Graph"
+            android:id="@+id/showBarButton"
+            android:layout_margin="2dp"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show Line Graph"
+            android:id="@+id/showLineButton"
+            android:layout_margin="2dp"
+            android:visibility="gone"/>
+
+        <com.jjoe64.graphview.GraphView
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:id="@+id/lineGraph"
+            />
+
+        <com.jjoe64.graphview.GraphView
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:id="@+id/barGragh"
+            android:visibility="gone"
+            />
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calorie Consumed"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:gravity="center"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show Bar Graph"
+            android:id="@+id/showBarButton1"
+            android:layout_margin="2dp"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show Line Graph"
+            android:id="@+id/showLineButton1"
+            android:layout_margin="2dp"
+            android:visibility="gone"/>
+        <com.jjoe64.graphview.GraphView
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:id="@+id/lineGraph1"
+
+            />
+
+        <com.jjoe64.graphview.GraphView
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:id="@+id/barGragh1"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

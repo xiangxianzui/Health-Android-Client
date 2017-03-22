@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_calorieGoal"
+            android:icon="@drawable/aim"
+            android:title="Calorie Goal" />
+        <item
+            android:id="@+id/nav_dailyDiet"
+            android:icon="@drawable/calendar"
+            android:title="Daily Diet" />
+        <item
+            android:id="@+id/nav_steps"
+            android:icon="@drawable/log"
+            android:title="Steps" />
+        <item
+            android:id="@+id/nav_trackCalorie"
+            android:icon="@drawable/alien_gray_zoom"
+            android:title="Track Calorie" />
+    </group>
+
+    <item android:title="Advanced">
+        <menu>
+            <item
+                android:id="@+id/nav_progressReport"
+                android:icon="@drawable/align_horizontal_bottom"
+                android:title="Progress Report" />
+            <item
+                android:id="@+id/nav_map"
+                android:icon="@drawable/location"
+                android:title="Map" />
+        </menu>
+    </item>
+
+    <item android:title="Social">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share"></item>
+        </menu>
+    </item>
+
+</menu>

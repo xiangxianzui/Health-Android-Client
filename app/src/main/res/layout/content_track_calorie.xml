@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="edu.monash.infotech.health.TrackCalorieActivity"
+    tools:showIn="@layout/activity_track_calorie"
+    android:orientation="vertical"
+    android:background="@drawable/track_calorie_bg">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:text="Track Calorie"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:textColor="@color/colorAccent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Today"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        android:id="@+id/TodayTextView"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp">
+            <TextView
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:text="My Calorie Goal is:"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="My Calorie Goal"
+                android:textStyle="bold"
+                android:id="@+id/myCorieGoalTextView"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|top"
+                android:text="xxx Remaining Today"
+                android:gravity="center"
+                android:id="@+id/RemaingTextView"/>
+
+            <ProgressBar
+                style="@style/StyleProgressBarMini"
+                android:background="@drawable/shape_progressbar_bg"
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:id="@+id/RemainingProgressBar"
+                android:layout_gravity="center" />
+
+        </FrameLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:rowCount="2"
+            android:columnCount="3"
+            android:orientation="vertical"
+
+            >
+            <TextView
+                android:text="ConsumedNum"
+                android:textSize="15sp"
+                android:textColor="#4169E1"
+                android:id="@+id/ConsumedNumTextView"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:gravity="center"/>
+            <TextView
+                android:text="Consumed"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:gravity="center"
+                android:textStyle="bold|italic"/>
+            <TextView
+                android:text="BurnedNum"
+                android:textSize="15sp"
+                android:textColor="#CD3700"
+                android:id="@+id/BurnedNumTextView"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:gravity="center"/>
+            <TextView
+                android:text="Burned"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:gravity="center"
+                android:textStyle="bold|italic"/>
+            <TextView
+                android:text="NetNum"
+                android:textSize="15sp"
+                android:textColor="#68228B"
+                android:id="@+id/NetNumTextView"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:gravity="center"/>
+            <TextView
+                android:text="Net"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:gravity="center"
+                android:textStyle="bold|italic"/>
+
+        </GridLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Foods Eaten Today"
+        android:textSize="20sp"
+        android:textColor="@color/colorAccent"
+        android:gravity="center"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  Time    Food Name    Calories Eaten"
+            android:textStyle="bold|italic"/>
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/orderBySpinner">
+        </Spinner>
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/FoodTodayListView"
+        android:layout_gravity="center_horizontal" />
+
+
+</LinearLayout>
